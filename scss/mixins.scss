@@ -1,0 +1,30 @@
+@mixin font($size, $weight: 400, $color: #000000) {
+  font-family: "Montserrat", sans-serif;
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+  text-decoration: none;
+}
+@mixin flexSB {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+@mixin for-mobiles {
+  @media (max-width: 550px) {
+    @content;
+  }
+}
+@mixin for-tablet {
+  @media (max-width: 965px) {
+    @content;
+  }
+}
+@mixin for-desktop-min {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
